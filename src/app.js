@@ -11,7 +11,7 @@ var HelloWorldLayer = cc.Layer.extend({
     occupied2: [0,0,0,0,0,0,0,0,0],
     
     selection: function(){
-        var choice = prompt("Player 1, X or O?");
+        var choice = prompt("Player 1, 'X' or Player 2, 'O'?");
         switch(choice){
             case "X":
                 break;
@@ -33,6 +33,7 @@ var HelloWorldLayer = cc.Layer.extend({
             this.occupied1[j] = 0;
             this.occupied2[j] = 0;
         }
+        this.turn = 0;
         this.selection();
     },
     
